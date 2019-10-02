@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="Shortcut Icon" href="{{ asset('img/favicon.png') }}" />
+
+    <title>{% block meta_title %}Code Blog{% endblock %}</title>
+
+    {% block stylesheets %}
+        <!-- Bootstrap core CSS -->
+        <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+              type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+              rel='stylesheet' type='text/css'>
+
+        <!-- Custom styles for this template -->
+        <link href="{{ asset('css/clean-blog.css') }}" rel="stylesheet">
+    {% endblock %}
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#TODO">CodeBlog</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#TODO">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#TODO">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hello
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#TODO">Hello</a>
+                        <a class="dropdown-item" href="#TODO">Hello Firstname</a>
+                        <a class="dropdown-item" href="#TODO">Hello 4</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#TODO">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block body %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ asset('img/landscape.gif') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>{% block title %}Code Blog{% endblock %}</h1>
+                    <span class="subheading">{% block subtitle %}Mon blog de code{% endblock %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container">
+    <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="row">
+
+                    <div class="col-sm-2 d-none d-sm-block">
+                        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ asset('img/profile.jpg') }}" alt=""/>
+                    </div>
+                    <div class="col-sm-10">
+                        <h2>Bienvenue sur le template de blog</h2>
+                        <p>
+                            Je vous ai préparé cette intégration bootstrap pour qu'on perde pas de temps.<br/>
+                            Alors ferme ton facebook et intègre moi <a href="page_a_integrer.html">>cette page de design<</a> en twig 🦄
+                            <ul>
+                                <li><a href="https://getbootstrap.com/docs/4.3/components/alerts/">https://getbootstrap.com</a></li>
+                                <li><a href="https://twig.symfony.com/doc/2.x/">https://twig.symfony.com</a></li>
+                                <li><a href="https://symfony.com/doc/current/templating.html">https://symfony.com/doc/templating</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-10">
+                <div class="post-preview">
+                    <a href="#TODO">
+                        <h4 class="">
+                            Exemple de post
+                        </h4>
+                        <h5 class="post-subtitle">
+                            L'intelligent est un idiot qui a réussi.
+                        </h5>
+                    </a>
+                    <p class="post-meta">Posted by
+                        <a href="#TODO">Renaud</a>
+                        le 02/10/2019</p>
+                </div>
+                <hr>
+                <!-- Pager -->
+                <div class="clearfix">
+                    <a class="btn btn-primary float-right" href="#TODO">Older Posts &rarr;</a>
+                </div>
+            </div>
+    </div>
+</main>
+
+{% endblock %}
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#TODO">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#TODO">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Votre prof de symfony 2020</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+
+<!-- Custom scripts for this template -->
+{% block javascripts %}{% endblock %}
+
+</body>
+
+</html>
