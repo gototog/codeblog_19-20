@@ -14,14 +14,21 @@ class HelloController extends AbstractController
      */
     public function number($number)
     {
-        $names = '';
-        for ($i = 0; $i < $number; $i++) {
-            $names = $names . ' world';
-        }
 
-        return new Response(
-            '<html><body>Hello ' . $names . '!</body></html>'
-        );
+        return $this->render('hello/number.html.twig', array(
+            'number' => $number,
+            'admin' => 'Renaud',
+        ));
+    }
+
+
+    /**
+     * @Route("/hello/world", name="hello_world")
+     */
+    public function hello()
+    {
+        return $this->render('hello/world.html.twig', array(
+        ));
     }
 
     /**
@@ -29,20 +36,11 @@ class HelloController extends AbstractController
      */
     public function name($name)
     {
-        return new Response(
-            '<html><body>Hello ' . $name . '!</body></html>'
-        );
+        return $this->render('hello/name.html.twig', array(
+            'name' => $name,
+        ));
     }
 
-    /**
-     * @Route("/hello/world", name="hello_world")
-     */
-    public function hello()
-    {
-        return new Response(
-            '<html><body>Hello world!</body></html>'
-        );
-    }
 
 
 

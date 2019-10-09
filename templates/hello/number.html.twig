@@ -1,0 +1,19 @@
+{% extends 'base_home.html.twig' %}
+
+
+
+{% block meta_title %}{{ parent() }} - Hello number{% endblock %}
+
+
+{% block body %}
+    <main class="container">
+
+        {% for i in 1..number %}
+            {{ admin }}
+        {% endfor %}
+
+    </main>
+{% endblock %}
+
+
+

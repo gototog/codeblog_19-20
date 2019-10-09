@@ -1,0 +1,16 @@
+{% extends 'base_home.html.twig' %}
+
+
+
+{% block meta_title %}{{ parent() }} - Hello World{% endblock %}
+
+
+{% block body %}
+<main class="container">
+
+    Hello world
+
+    {% include '_cat_gif.html.twig' %}
+
+</main>
+{% endblock %}
