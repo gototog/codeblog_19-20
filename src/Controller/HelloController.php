@@ -25,6 +25,16 @@ class HelloController extends AbstractController
     }
 
     /**
+     * @Route("/hello/{name}", name="hello_name")
+     */
+    public function name($name)
+    {
+        return new Response(
+            '<html><body>Hello ' . $name . '!</body></html>'
+        );
+    }
+
+    /**
      * @Route("/hello/world", name="hello_world")
      */
     public function hello()
@@ -34,14 +44,6 @@ class HelloController extends AbstractController
         );
     }
 
-    /**
-     * @Route("/conditions/{name}", name="hello_name")
-     */
-    public function name($name)
-    {
-        return new Response(
-            '<html><body>Hello ' . $name . '!</body></html>'
-        );
-    }
+
 
 }
