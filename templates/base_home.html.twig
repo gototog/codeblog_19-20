@@ -118,6 +118,14 @@
                         le 02/10/2019</p>
                 </div>
                 <hr>
+
+                <div>
+                    {% for category in categories %}
+                        {{ category.name }} <br/>
+                    {% endfor %}
+                </div>
+
+
                 <!-- Pager -->
                 <div class="clearfix">
                     <a class="btn btn-primary float-right" href="#TODO">Older Posts &rarr;</a>

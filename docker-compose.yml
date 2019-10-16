@@ -1,0 +1,32 @@
+version: "3.4"
+
+services:
+    web:
+        image: registry.kibatic.com/atmo/captotheque:$DOCKER_IMAGE_TAG
+        build:
+            context: .
+            target: base
+        extra_hosts:
+          - "web.atmo-api.localhost:172.17.0.1"
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+
+    db:
+      image: postgres:11
+      volumes:
+        - /etc/localtime:/etc/localtime:ro
+      environment:
+        POSTGRES_PASSWORD: root
+        POSTGRES_DB: captotheque
+
+
+    mailcatcher:
+      image: tophfr/mailcatcher
+      labels:
+        - "traefik.port=80"
+
+    node:
+      image: node:12-stretch
+      working_dir: /app
+      volumes:
+          - .:/app

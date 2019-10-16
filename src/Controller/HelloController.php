@@ -23,7 +23,7 @@ class HelloController extends AbstractController
 
 
     /**
-     * @Route("/hello/world", name="hello_world")
+         * @Route("/hello/world", name="hello_world")
      */
     public function hello()
     {
