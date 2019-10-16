@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-
-<title>Article index</title>
-
+{%  extends 'base_home.html.twig' %}
 {% block body %}
     <h1>Article index</h1>
 
@@ -23,8 +20,8 @@
                 <td>{{ article.content }}</td>
                 <td>{{ article.createdDate ? article.createdDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
+                    <a href="{{ path('article_show', {'id': article.id}) }}" class="btn btn-light">show</a>
+                    <a href="{{ path('article_edit', {'id': article.id}) }}" class="btn btn-primary>edit</a>
                 </td>
             </tr>
         {% else %}
